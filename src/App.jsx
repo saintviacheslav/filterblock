@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path='' element={<MainPage />}></Route>
         <Route path='/item' element ={<ItemPage/>}></Route>
-        <Route path='/:id/' element={<ItemPage />}></Route>
+        <Route path='/:id' element={<ItemPage />}></Route>
       </Routes>
     </vacCont.Provider>
 
