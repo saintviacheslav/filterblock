@@ -10,7 +10,7 @@ function ItemPage(){
     return (
         <div className={style.content}>
             
-           {arr.map(el => <Card id={el.id} title={el.title} salary={el.salary} schedule={el.schedule} location={el.location}></Card>)}
+           {arr.map(el => <Card key={el.id} id={el.id} title={el.title} salary={el.salary} schedule={el.schedule} location={el.location}></Card>)}
            
            
            
@@ -19,19 +19,19 @@ function ItemPage(){
             
             <ul>
                 {arr.map(el=>{
-            return el.responsibilities.map((el)=><li>{el}</li>);
+            return el.responsibilities.map((el,key)=><li key={key}>{el}</li>);
            })}
             </ul>
             <h1>Требования:</h1>
             <ul>
                 {arr.map(el=>{
-            return el.requirements.map((el)=><li>{el}</li>);
+            return el.requirements.map((el,key)=><li key={key}>{el}</li>);
            })}
             </ul>
             <h1>Условия:</h1>
             <ul>
                 {arr.map(el=>{
-            return el.conditions.map((el)=><li>{el}</li>);
+            return el.conditions.map((el,key)=><li key={key}>{el}</li>);
            })}
             </ul>
             </div> 
